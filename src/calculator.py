@@ -23,7 +23,7 @@ amino_weights = {
 
 
 def weigh_sequence(sequence):
-    weight = 0
+    weight = 18.02
 
     for c in sequence:
         weight += amino_weights[c]
