@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 
 from src import parser
+from src import calculator
 
 def parse_args():
     parser = ArgumentParser()
@@ -27,3 +28,7 @@ if __name__ == "__main__":
         sequence = parser.parse_fasta(args.file)
     else:
         sequence = args.sequence
+
+    weight = calculator.weigh_sequence(sequence)
+
+    print("{:,.2f}".format(weight), "Daltons")
